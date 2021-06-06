@@ -674,6 +674,7 @@ static ssize_t wakeup_enable_set(struct device *dev,
 	return ret;
 }
 
+static DEVICE_ATTR(power_cfg, S_IWUSR, NULL, wakeup_enable_set);
 static DEVICE_ATTR(wakeup_enable, S_IWUSR, NULL, wakeup_enable_set);
 
 /**
@@ -800,6 +801,7 @@ static struct attribute *attributes[] = {
 	&dev_attr_device_prepare.attr,
 	&dev_attr_regulator_enable.attr,
 	&dev_attr_hw_reset.attr,
+	&dev_attr_power_cfg.attr,
 	&dev_attr_wakeup_enable.attr,
 	&dev_attr_handle_wakelock.attr,
 	&dev_attr_clk_enable.attr,
