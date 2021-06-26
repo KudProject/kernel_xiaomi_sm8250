@@ -3,6 +3,7 @@
 #
 config UNICODE
 	bool "UTF-8 normalization and casefolding support"
+	default y
 	help
 	  Say Y here to enable UTF-8 NFD normalization and NFD+CF casefolding
 	  support.
